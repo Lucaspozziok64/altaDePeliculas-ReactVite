@@ -1,0 +1,29 @@
+.contenedorForm {
+  background: -webkit-linear-gradient(
+    90deg,
+    #4a1c58,
+    #7c346c,
+    #934c7f,
+    #5e2962
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    90deg,
+    #4a1c58,
+    #7c346c,
+    #934c7f,
+    #5e2962
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  border-radius: 10px;
+  width: 600px;
+}
+
+.formulario {
+  width: 100%;
+}
+
+
+@media (max-width: 767px) {
+  .contenedorForm {
+    width: 240px;
+  }
+}
