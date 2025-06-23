@@ -7,12 +7,11 @@ const CardsPeliculas = ({ pelicula }) => {
             <h5 className="card-tittle text-center text-md-start">{pelicula.nombre}🎥</h5>
           </div>
           <p className="card-text">
-            <strong>Descripcion:</strong>
-            {pelicula.descripcion}
+            <strong>Descripcion: </strong>{pelicula.descripcion}
           </p>
         </div>
         <div className="card-footer bg-secondary text-center text-md-start">
-          <p>Genero: {pelicula.genero}</p>
+          <p><strong>Genero: </strong>{pelicula.genero}</p>
         </div>
       </div>
     </div>

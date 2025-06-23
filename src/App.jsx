@@ -8,8 +8,8 @@ function App() {
 
   const [peliculas, setPeliculas] = useState([]);
 
-  const agregarPeliculas = (nuevaPeliculas) => {
-    const nuevo = { id: Date.now(), nombre: nuevaPeliculas}
+  const agregarPeliculas = (nuevoNombre, nuevoDescripcion, nuevoGenero) => {
+    const nuevo = { id: Date.now(), nombre: nuevoNombre, descripcion: nuevoDescripcion, genero: nuevoGenero}
     setPeliculas([...peliculas, nuevo]);
   }
 
