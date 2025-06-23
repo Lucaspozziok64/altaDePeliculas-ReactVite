@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Button } from "react-bootstrap";
 import Form from "react-bootstrap/Form";
+import Swal from "sweetalert2";
 
 const Formulario = ({ agregarPeliculas }) => {
   const [nombre, setnombre] = useState("");
@@ -12,9 +13,27 @@ const Formulario = ({ agregarPeliculas }) => {
     console.log("Aqui debo capturar los dartos del form");
 
     if (!nombre || !descripcion || !genero) {
-      alert("Por favor rellene todos los campos");
+      Swal.fire({
+        title: "Error!",
+        text: "Debes rellenar y/o seleccionar todos los campos!",
+        icon: "warning",
+      });
     } else {
-      alert("Formulario Enviado");
+      const Toast = Swal.mixin({
+        toast: true,
+        position: "top-end",
+        showConfirmButton: false,
+        timer: 3000,
+        timerProgressBar: true,
+        didOpen: (toast) => {
+          toast.onmouseenter = Swal.stopTimer;
+          toast.onmouseleave = Swal.resumeTimer;
+        },
+      });
+      Toast.fire({
+        icon: "success",
+        title: "Pelcula agregada",
+      });
       //Aqui limpiamos los campos del formulario
       setDescripcion("");
       setnombre("");
@@ -46,9 +65,14 @@ const Formulario = ({ agregarPeliculas }) => {
         />
       </Form.Group>
       <Form.Group className="mb-3" controlId="formBasicGenero">
-        <Form.Label className="mb-0">Elegi el genero de tu pelicula:</Form.Label>
-        <Form.Select aria-label="Default select example" onChange={(e) => setGenero(e.target.value)}
-          value={genero}>
+        <Form.Label className="mb-0">
+          Elegi el genero de tu pelicula:
+        </Form.Label>
+        <Form.Select
+          aria-label="Default select example"
+          onChange={(e) => setGenero(e.target.value)}
+          value={genero}
+        >
           <option>Generos</option>
           <option value="Drama">Drama</option>
           <option value="Infantil">Infantil</option>

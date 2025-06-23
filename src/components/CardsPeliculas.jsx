@@ -11,7 +11,7 @@ const CardsPeliculas = ({ pelicula }) => {
           </p>
         </div>
         <div className="card-footer bg-secondary text-center text-md-start">
-          <p><strong>Genero: </strong>{pelicula.genero}</p>
+          <p><strong>Genero: </strong>{pelicula.genero}🎞️</p>
         </div>
       </div>
     </div>
