@@ -10,6 +10,16 @@ const Formulario = () => {
   const handleSubmit = (e) => {
     e.preventDefault()
     console.log('Aqui debo capturar los dartos del form')
+
+    if(!nombre || !descripcion || !genero) {
+      alert('Por favor rellene todos los campos');
+    } else {
+      alert('Formulario Enviado')
+      //Aqui limpiamos los campos del formulario
+      setDescripcion('')
+      setnombre('')
+      setGenero('')
+    }
   }
 
   return (
