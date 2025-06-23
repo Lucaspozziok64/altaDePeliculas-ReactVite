@@ -10,7 +10,6 @@ const Formulario = ({ agregarPeliculas }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Aqui debo capturar los dartos del form");
 
     if (!nombre || !descripcion || !genero) {
       Swal.fire({
@@ -40,7 +39,6 @@ const Formulario = ({ agregarPeliculas }) => {
       setGenero("");
 
       agregarPeliculas(nombre, descripcion, genero);
-      console.log(agregarPeliculas);
     }
   };
 
