@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Button } from "react-bootstrap";
 import Form from "react-bootstrap/Form";
 
-const Formulario = () => {
+const Formulario = ({ agregarPeliculas }) => {
   const [nombre, setnombre] = useState('');
   const [descripcion, setDescripcion] = useState('');
   const [genero, setGenero] = useState('');
@@ -19,6 +19,8 @@ const Formulario = () => {
       setDescripcion('')
       setnombre('')
       setGenero('')
+
+      agregarPeliculas(nombre, descripcion, genero)
     }
   }
 

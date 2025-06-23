@@ -1,18 +1,18 @@
-const CardsPeliculas = () => {
+const CardsPeliculas = ({ pelicula }) => {
   return (
     <div className="col">
       <div className="card">
         <div className="card-body">
           <div className="card-header bg-danger-subtle">
-            <h5 className="card-tittle text-center text-md-start">Star Wars🎥</h5>
+            <h5 className="card-tittle text-center text-md-start">{pelicula.nombre}🎥</h5>
           </div>
           <p className="card-text">
-            <strong>Descripcion:</strong>This is a longer card with supporting text below as a natural
-            lead-in to additional content. This content is a little bit longer.
+            <strong>Descripcion:</strong>
+            {pelicula.descripcion}
           </p>
         </div>
         <div className="card-footer bg-secondary text-center text-md-start">
-          <p>Genero:</p>
+          <p>Genero: {pelicula.genero}</p>
         </div>
       </div>
     </div>
