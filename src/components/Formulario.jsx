@@ -26,7 +26,7 @@ const Formulario = ({ agregarPeliculas }) => {
   };
 
   return (
-    <Form onSubmit={handleSubmit} className="text-white formulario">
+    <Form onSubmit={handleSubmit} className="text-white formulario p-3">
       <Form.Group className="mb-3" controlId="formBasicNombre">
         <Form.Label className="mb-0">Nombre:</Form.Label>
         <Form.Control
