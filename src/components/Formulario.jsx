@@ -17,7 +17,7 @@ const Formulario = () => {
         <Form.Control type="text" placeholder="ej Ficcion" />
       </Form.Group>
       <div className="d-flex justify-content-end mx-2">
-        <Button variant="success" className=" rounded-3">Agregar</Button>
+        <Button variant="success" className="rounded-3">Agregar</Button>
       </div>
     </Form>
   );
