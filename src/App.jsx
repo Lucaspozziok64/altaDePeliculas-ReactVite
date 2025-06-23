@@ -28,6 +28,10 @@ function App() {
           />)}
         </div>
       </main>
+      <footer className="bg-dark text-white text-center">
+        <p className="mb-0">&copy;Todos los derechos reservados</p>
+        <p className="mb-0">Desarrolado por <a href="https://github.com/Lucaspozziok64">Lucas Figueroa</a>👨‍💻</p>
+      </footer>
     </>
   );
 }
