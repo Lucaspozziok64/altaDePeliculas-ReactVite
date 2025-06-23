@@ -31,7 +31,7 @@ const Formulario = ({ agregarPeliculas }) => {
       });
       Toast.fire({
         icon: "success",
-        title: "Pelcula agregada",
+        title: "Pelicula agregada",
       });
       //Aqui limpiamos los campos del formulario
       setDescripcion("");
