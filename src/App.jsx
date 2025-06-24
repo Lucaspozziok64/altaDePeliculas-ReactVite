@@ -1,11 +1,17 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./App.css";
 import CardsPeliculas from "./components/CardsPeliculas";
 import Formulario from "./components/Formulario";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
-  const [peliculas, setPeliculas] = useState([]);
+
+  const peliculasGuardadas = JSON.parse(localStorage.getItem('peliculasDisponibles')) || [];
+  const [peliculas, setPeliculas] = useState(peliculasGuardadas);
+
+  useEffect(() => {
+    localStorage.setItem("peliculasDisponibles", JSON.stringify(peliculas));
+  }, [peliculas]);
 
   const agregarPeliculas = (nuevoNombre, nuevoDescripcion, nuevoGenero) => {
     const nuevo = {
