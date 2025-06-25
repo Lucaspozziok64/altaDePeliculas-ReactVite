@@ -44,7 +44,7 @@ function App() {
         </nav>
       </header>
       <main className="container my-2">
-        <h1 className="text-white">Dar de Alta</h1>
+        <h1 className="text-white">Dar de Alta Peliculas</h1>
         <section className="p-1 contenedorForm">
           <Formulario agregarPeliculas={agregarPeliculas}></Formulario>
         </section>
